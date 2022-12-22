@@ -8,19 +8,8 @@ pipeline {
     }
 
     stage('ListDirContent') {
-      parallel {
-        stage('ListDirContent') {
-          steps {
-            sh 'ls -la'
-          }
-        }
-
-        stage('FrontEndUnitTest') {
-          steps {
-            sh 'go mod tidy -v'
-          }
-        }
-
+      steps {
+        sh 'ls -la'
       }
     }
 
