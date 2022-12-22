@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('ListDirContent') {
+      steps {
+        sh 'ls -la'
+      }
+    }
+
   }
 }
